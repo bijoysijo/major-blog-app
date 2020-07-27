@@ -15,11 +15,14 @@
 @import "bootstrap";
 @import "pages.scss";
 
+$font: 'Poppins', sans-serif;
 
 h1 {
 	color: grey;
+	font-family: $font;
 }
 
-.container {
-	background: lavender;
-}
+// .container {
+// 	background: lavender;
+// }
+
