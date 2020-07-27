@@ -5,7 +5,7 @@ ruby '2.7.0'
 
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 
-gem 'pg', '~> 1.2', '>= 1.2.3'
+
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
@@ -15,6 +15,11 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'haml-rails', '~> 2.0'
 gem 'simple_form'
 gem 'devise'
+gem 'hirb'
+gem 'bootstrap', '~> 4.5.0'
+gem 'pg', '~> 1.2', '>= 1.2.3'
+
+
 
 group :development, :test do
   gem 'pry'

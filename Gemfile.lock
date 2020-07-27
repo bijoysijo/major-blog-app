@@ -58,10 +58,16 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    autoprefixer-rails (9.8.5)
+      execjs
     bcrypt (3.1.15)
     bindex (0.8.1)
     bootsnap (1.4.7)
       msgpack (~> 1.0)
+    bootstrap (4.5.0)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 1.14.3, < 2)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     capybara (3.33.0)
       addressable
@@ -83,6 +89,7 @@ GEM
       warden (~> 1.2.3)
     erubi (1.9.0)
     erubis (2.7.0)
+    execjs (2.7.0)
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -95,6 +102,7 @@ GEM
       haml (>= 4.0.6, < 6.0)
       html2haml (>= 1.0.1)
       railties (>= 5.1)
+    hirb (0.7.3)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
@@ -125,6 +133,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pg (1.2.3)
+    popper_js (1.16.0)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -237,9 +246,11 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
+  bootstrap (~> 4.5.0)
   capybara (>= 2.15)
   devise
   haml-rails (~> 2.0)
+  hirb
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (~> 1.2, >= 1.2.3)
