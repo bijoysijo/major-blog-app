@@ -13,6 +13,5 @@ test:
   database: major_blog_app_test
   pool: 5
   username: postgres
-  username: soorajphilip
   password:
   timeout: 5000
