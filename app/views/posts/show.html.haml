@@ -1,15 +1,15 @@
-%p#notice= notice
+%div{:style => "width: 100%; height: 300px; overflow-y:hidden"}
+	= image_tag(@post.banner,style:'width:100%')
+.container{:style => "margin-top: 1em"}
+	.row
+		.jumbotron{:style => "width: 100%"}
+			%h1.display-4 
+				= link_to @post.title, posts_path
+			%p.lead
+				= @post.updated_at.strftime("%A,%B,%e,%Y")
+				by #{@post.user.username} | #{pluralize(@post.views,"view")}
+			%hr.post_body
+				= @post.body
+		
+		
 
-%p
-  %b Title:
-  = @post.title
-%p
-  %b Views:
-  = @post.views
-%p
-  %b User:
-  = @post.user
-
-= link_to 'Edit', edit_post_path(@post)
-\|
-= link_to 'Back', posts_path

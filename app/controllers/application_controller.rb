@@ -1,7 +1,11 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!, except: [:index, :show]
+	helper_method :is_admin!
 
-  def after_sign_out_path_for(user)
-    posts_path
-  end
+	private
+	def is_admin!
+		if current_user && current_user.admin
+		else
+			redirect_to post_path
+		end
+	end
 end

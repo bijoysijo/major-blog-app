@@ -6,3 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+15.times do |p|
+	post = Post.new
+	post.title = Faker::Lorem.sentence(word_count: 3, random_words_to_add: 7)
+	post.body = Faker::Lorem.paragraph_by_chars(number: 1500)
+	post.user = User.first
+	post.thumbnail.attach(io: URI.open("https://picsum.photos/1920/1080"),filename: "#{p}_thumbnail.jpg")
+	post.banner.attach(io: URI.open("https://picsum.photos/1920/1080"),filename: "#{p}_banner.jpg")
+	post.views = Faker::Number.between(from: 1, to: 5000)
+	post.save
+
+end

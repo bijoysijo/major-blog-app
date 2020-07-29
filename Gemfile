@@ -18,6 +18,10 @@ gem 'devise'
 gem 'hirb'
 gem 'bootstrap', '~> 4.5.0'
 gem 'pg', '~> 1.2', '>= 1.2.3'
+gem 'image_processing', '~> 1.2'
+gem 'faker'
+gem 'will_paginate'
+gem 'friendly_id'
 
 
 
