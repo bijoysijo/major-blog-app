@@ -1,17 +1,15 @@
-development:
+defaults: &defaults
   adapter: postgresql
   encoding: unicode
-  database: major_blog_app_development
   pool: 5
   username: postgres
   password:
   timeout: 5000
 
+development:
+  <<: *defaults
+  database: major_blog_app_development
+
 test:
-  adapter: postgresql
-  encoding: unicode
+  <<: *defaults
   database: major_blog_app_test
-  pool: 5
-  username: postgres
-  password:
-  timeout: 5000
